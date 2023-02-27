@@ -1,20 +1,6 @@
-sidesRectangles = []
-indexSides = 1
-indexRectangles = 1
-# Цикл вводу значень
-for i in range(6):
-    if (indexSides == 1):
-        str = "шу"
-    if (indexSides == 2):
-        str = "гу"
+from LibraryFunctions import InputSides
 
-    sidesRectangles.append(float(input(f"Введіть {indexSides}-{str} сторону {indexRectangles}-го прямокутника: ")))
-    indexSides += 1
-
-    if (indexSides == 3):
-        indexSides = 1
-        indexRectangles += 1
-
+sidesRectangles = InputSides.Input(6, "прямокутника")
 def AreaRectangles(arr):
     area1 = arr[0]*arr[1]
     area2 = arr[2]*arr[3]
